@@ -1,0 +1,15 @@
+ <h1>Annette acosta   castellanos</h1>
+  <h2>Amante del Maquillaje</h2>
+  <p>
+    Hola, soy Annette, una apasionada del maquillaje y todo lo relacionado con la belleza. Desde pequeña, me ha fascinado cómo el maquillaje puede transformar y resaltar la belleza natural de las personas. Me encanta experimentar con nuevos looks, desde los más naturales hasta los más atrevidos.
+  </p>
+  <p>
+    En mi tiempo libre, disfruto probando nuevos productos, siguiendo tutoriales de maquillaje. Mi objetivo es inspirar a otros a explorar su creatividad y sentirse seguros de sí mismos.
+  </p>
+  <p class="destacado">
+    ¡El maquillaje es mi forma de arte favorita!
+  </p>
+  <a href="#" class="boton">Ver mis trabajos</a>
+</body>
+</html>
+
