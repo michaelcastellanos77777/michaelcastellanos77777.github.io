@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Annette Acosta Castellanos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 25px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #3498db;
+      outline: none;
+      box-shadow: 0 0 5px rgba(52,152,219,0.5);
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin-right: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"] {
+      background-color: #27ae60;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #219653;
+    }
+
+    button[type="reset"] {
+      background-color: #e74c3c;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #c0392b;
+    }
+
+    button[type="button"] {
+      background-color: #f39c12;
+    }
+
+    button[type="button"]:hover {
+      background-color: #d35400;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #7f8c8d;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulario de Contacto</h1>
+
+  <form>
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="comentario">Comentario:</label>
+    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpiar</button>
+    <button type="button" onclick="alert('Por favor, llena todos los campos antes de enviar.')">Ayuda</button>
+  </form>
+
+  <div class="footer">
+    Formulario creado por Annette Acosta Castellanos
+  </div>
+
+</body>
+</html>
+
+
+
+
+
