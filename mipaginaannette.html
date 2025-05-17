@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Web de Annette Acosta Castellanos</title>
+  <style>
+    /* Fondo animado de estrellas */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .stars, .stars2, .stars3 {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-repeat: repeat;
+      z-index: -1;
+      animation: moveStars 100s linear infinite;
+    }
+
+    .stars {
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 2px 2px;
+      opacity: 0.5;
+    }
+
+    .stars2 {
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity: 0.3;
+      animation-duration: 150s;
+    }
+
+    .stars3 {
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 1px 1px;
+      opacity: 0.2;
+      animation-duration: 200s;
+    }
+
+    @keyframes moveStars {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-1000px);
+      }
+    }
+
+    nav {
+      background-color: rgba(0, 0, 50, 0.7);
+      padding: 15px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #4a90e2;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .tarjeta {
+      background-color: #e6f0fa;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      flex: 1 1 150px;
+    }
+
+    video {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Capas del fondo animado -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#pec">Actividades PEC</a></li>
+      <li><a href="#museo">Museo Virtual</a></li>
+      <li><a href="#video">Diseño Digital</a></li>
+    </ul>
+  </nav>
+
+  <main id="contenido">
+    <section id="inicio">
+      <h1>Bienvenido a mi página</h1>
+      <p>Hola, soy <strong>Annette Acosta Castellanos</strong>. Este sitio refleja mi trabajo como estudiante, donde muestro mis intereses, proyectos académicos y creativos.</p>
+    </section>
+
+    <section id="perfil" class="seccion-protegida">
+      <h2>Perfil Personal</h2>
+      <img src="img/avatar.png" alt="Mi avatar" />
+      <p>Nombre: Annette Acosta Castellanos<br>
+         Carrera: Diseño Gráfico<br>
+         Intereses: Arte digital, fotografía, diseño UI/UX, creatividad e innovación.</p>
+    </section>
+
+    <section id="pec" class="seccion-protegida">
+      <h2>Actividades PEC</h2>
+      <div class="galeria">
+        <div class="tarjeta">Actividad 1: Diseño de Identidad Visual</div>
+        <div class="tarjeta">Actividad 2: Proyecto Editorial</div>
+        <div class="tarjeta">Actividad 3: Branding Interactivo</div>
+      </div>
+    </section>
+
+    <section id="museo" class="seccion-protegida">
+      <h2>Museo Virtual</h2>
+      <p>Este es mi museo virtual mejorado, con un recorrido visual por mis trabajos artísticos más representativos. Aquí puedes ver una galería de ilustraciones, afiches y composiciones gráficas desarrolladas durante el semestre.</p>
+    </section>
+
+    <section id="video" class="seccion-protegida">
+      <h2>Proyecto de Diseño Digital</h2>
+      <video controls>
+        <source src="video/diseno.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+      <p>Este video muestra el desarrollo de mi proyecto final para la materia de Diseño Digital. Se trata de una interfaz interactiva creada con principios de usabilidad y diseño visual atractivo.</p>
+    </section>
+  </main>
+
+  <script>
+    if (!sessionStorage.getItem("loggeado")) {
+      document.querySelectorAll(".seccion-protegida").forEach(sec => {
+        sec.innerHTML = "<p>🔒 Debes iniciar sesión para ver este contenido.</p>";
+      });
+    }
+  </script>
+</body>
+</html>
